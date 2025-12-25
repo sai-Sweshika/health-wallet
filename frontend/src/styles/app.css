@@ -1,0 +1,265 @@
+/* ===== HEADER FIX (CRITICAL) ===== */
+.hw-header {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+}
+
+/* Logo */
+.hw-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+  white-space: nowrap;
+}
+
+/* Navigation */
+.hw-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hw-nav span {
+  font-size: 15px;
+  color: #374151;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hw-nav span:hover {
+  color: #2563eb;
+}
+
+/* Logout button */
+.hw-logout {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hw-logout:hover {
+  background: #1d4ed8;
+}
+
+/* ===== MAIN CONTENT FIX ===== */
+.hw-main {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 40px 60px;
+  background: #f5f7fb;
+}
+
+/* Center content like About page */
+/* FULL WIDTH CONTENT FIX */
+.hw-main {
+  width: 100%;
+  padding: 40px 60px;
+}
+
+.hw-container {
+  width: 100%;
+}
+
+.hw-card,
+.hw-dashboard-card,
+.hw-recent-item,
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+@media (max-width: 768px) {
+  .hw-header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 16px;
+  }
+
+  .hw-nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hw-logout {
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .hw-main {
+    padding: 24px 16px;
+  }
+}
+
+/* ============================
+   LOGIN & REGISTER – FIX
+============================ */
+
+/* Full-page center */
+.center-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Auth card */
+.center-container .card {
+  width: 380px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.center-container .card h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 22px;
+  color: #1e293b;
+}
+
+/* Inputs */
+.center-container .card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+.center-container .card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Button */
+.center-container .card button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.center-container .card button:hover {
+  background: #1d4ed8;
+}
+
+/* Link */
+.center-container .link {
+  margin-top: 18px;
+  text-align: center;
+  color: #2563eb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .center-container .card {
+    width: 90%;
+  }
+}
+
+/* =========================
+   AUTH (LOGIN / REGISTER)
+========================= */
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 360px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #1e293b;
+}
+
+/* Inputs – each on separate line */
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Button centered */
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background: #1d4ed8;
+}
+
+/* Link centered */
+.auth-link {
+  margin-top: 16px;
+  color: #2563eb;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .auth-card {
+    width: 90%;
+  }
+}
