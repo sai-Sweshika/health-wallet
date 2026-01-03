@@ -1,28 +1,35 @@
-import sqlite3 from "sqlite3";
+import Database from "better-sqlite3";
 
-export const db = new sqlite3.Database("healthwallet.db");
+export const db = new Database("healthwallet.db");
 
-db.serialize(() => {
-  db.run(`CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY,
+// USERS TABLE
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
     email TEXT UNIQUE,
     password TEXT
-  )`);
+  )
+`).run();
 
-  db.run(`CREATE TABLE IF NOT EXISTS reports (
-    id INTEGER PRIMARY KEY,
+// REPORTS TABLE
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS reports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER,
     type TEXT,
     date TEXT,
     file_path TEXT
-  )`);
+  )
+`).run();
 
-  db.run(`CREATE TABLE IF NOT EXISTS vitals (
-    id INTEGER PRIMARY KEY,
+// VITALS TABLE
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS vitals (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER,
     type TEXT,
     value TEXT,
     recorded_at TEXT
-  )`);
-});
+  )
+`).run();
